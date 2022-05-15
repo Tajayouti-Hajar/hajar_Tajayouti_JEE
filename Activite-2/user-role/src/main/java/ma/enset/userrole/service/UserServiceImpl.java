@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.UUID;
 
-@Service
+@Service  //compoent pour la couche metier
 @Transactional
-@AllArgsConstructor
+@AllArgsConstructor //injection via le const
 public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
     private RoleRepository roleRepository;

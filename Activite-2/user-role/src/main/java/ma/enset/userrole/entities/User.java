@@ -21,5 +21,7 @@ public class User {
     private String userName;
     private String pwd;
     @ManyToMany(mappedBy = "users",fetch = FetchType.EAGER)
+    /*sois dans role ou bien user
+     dans la classe role il y a un attribus qui s appelle users*/
     private List<Role> roles=new ArrayList<>();
 }
