@@ -17,6 +17,12 @@ public class EcomApplication {
         SpringApplication.run(EcomApplication.class, args);
     }
 
+
+
+
+
+
+
  /*public CommandLineRunner start(ProductRepository productRepository) {
         return arg ->
         {
@@ -28,11 +34,11 @@ public class EcomApplication {
 
             });
         };
-    }*/
+    }
  public CommandLineRunner start(ProductRepository productRepository, CategoryRepository categoryRepository)
  {
 
- }
+ }*/
 
 }
 

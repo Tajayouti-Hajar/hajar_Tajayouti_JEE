@@ -25,14 +25,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-        auth.userDetailsService(userDetailsService);
+        auth.userDetailsService(userDetailsService); //chercher les users
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.formLogin();
-
+        http.formLogin(); //formul de login par defaut ... si je veux personnalisé ce form http.formLogin().loginPage("/login")
+  // droits d accees
         http.authorizeRequests().antMatchers("/").permitAll();
         http.authorizeRequests().antMatchers("/admin/**").hasAnyAuthority("ADMIN");
         http.authorizeRequests().antMatchers("/user/**").hasAnyAuthority("USER");

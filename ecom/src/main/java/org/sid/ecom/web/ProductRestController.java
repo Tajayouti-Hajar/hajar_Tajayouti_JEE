@@ -13,13 +13,17 @@ public class ProductRestController {
     private ProductRepository productRepository;
 
     @GetMapping(path="/product")
-    public List<Product> productList(){
+    public List<Product> productList()
+    {
         return productRepository.findAll();
+
     }
 
     @GetMapping(path ="/products/{id}")
-    public Product getProducts(@PathVariable (name ="id") String id){
+    public Product getProducts(@PathVariable (name ="id") String id) // @PathVariable lie entre le id path et id parametre
+    {
         return productRepository.findById(id).get();
+
     }
 
     @PostMapping(path = "/products")
